@@ -115,7 +115,7 @@ class Menu {
             }
 
             //small switch case to give options inside of the stable to either create or remove a player.
-            let choice = showStableMenuOptions(stableInfo);
+            let choice = this.showStableMenuOptions(description);
             switch(choice){
                 case '1': this.createPlayer();
                 break;
@@ -124,6 +124,7 @@ class Menu {
         }
     }
 
+    //method to remove a stable, uses conditional logic to validate input and then uses the splice method to remove the chosen stable number
     removeStable(){
         let list = prompt('Enter number of stable to be removed')
         if(list > -1 && list < this.stables.length){
@@ -137,7 +138,7 @@ class Menu {
         this.chosenStable.players.push(new Player(playerName));
     }
 
-    //method to remove a created player, uses conditional logic to validate input and then uses the splice method to remove the chosen player number
+    //method to remove a created player, code similar to remove stable
     removePlayer(){
         let list = prompt('Enter number of player to be removed')
         if(list > -1 && list < this.chosenStable.players.length){
