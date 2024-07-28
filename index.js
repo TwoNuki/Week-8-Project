@@ -115,12 +115,19 @@ class Menu {
             }
 
             //small switch case to give options inside of the stable to either create or remove a player.
-            let choice = showStableMenuOptions(description);
+            let choice = showStableMenuOptions(stableInfo);
             switch(choice){
                 case '1': this.createPlayer();
                 break;
                 case '2': this.removePlayer();
             }
+        }
+    }
+
+    removeStable(){
+        let list = prompt('Enter number of stable to be removed')
+        if(list > -1 && list < this.stables.length){
+            this.stables.splice(list, 1)
         }
     }
 
@@ -135,8 +142,8 @@ class Menu {
         let list = prompt('Enter number of player to be removed')
         if(list > -1 && list < this.chosenStable.players.length){
             this.chosenStable.players.splice(list, 1)
+        }
     }
-
 }
 
 //method to start the application.
