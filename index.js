@@ -1,3 +1,8 @@
+/*Create a menu app as seen in this week’s video. What you create is up to you as long as it meets the following requirements:
+Use at least one array.
+Use at least two classes.
+Your menu should have the options to create, view, and delete elements.*/
+
 //creating the inital player class that uses the constructor method to take name and rank, with describe method to return a statement indicating player name and rank
 class Player {
     constructor(name, stable){
